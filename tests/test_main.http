@@ -1,0 +1,36 @@
+# Test FastAPI endpoints
+
+### Swagger API
+GET http://127.0.0.1:5000/
+Accept: application/json
+
+
+### Translate endpoint
+POST http://127.0.0.1:5000/translate
+Content-Type: application/json
+
+{
+  "text": "Hello, world!",
+  "languages": [
+    "es",
+    "fr",
+    "de",
+    "it",
+    "ru",
+    "ja",
+    "ar",
+    "ko",
+    "vi",
+    "zh"
+  ]
+}
+
+
+### Trigger translation
+POST http://127.0.0.1:5000/translate/fe2ef4b3-bf9d-4f6c-ab66-cd27669c1457/trigger
+Content-Type: application/json
+
+
+### Get translation
+GET http://127.0.0.1:5000/translate/fe2ef4b3-bf9d-4f6c-ab66-cd27669c1457
+Content-Type: application/json
